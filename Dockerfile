@@ -1,4 +1,4 @@
-﻿FROM microsoft/mssql-server-linux:latest
+﻿FROM mcr.microsoft.com/mssql/server:2017-latest
 EXPOSE 1433
 EXPOSE 5022
 
