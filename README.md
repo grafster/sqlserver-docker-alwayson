@@ -58,6 +58,14 @@ _NOTE: Database must exist at primary node and must have a full backup_
 To create the availability group with only one node, please connect to the instance that will be node 1 and execute the following code:
 
 ```sql
+sp_dropserver @@SERVERNAME
+sp_addserver 'sqlNode1', 'local'
+```
+
+Then restart the container and run 
+
+```sql
+
 CREATE AVAILABILITY GROUP [AG1]
     WITH (CLUSTER_TYPE = NONE)
     FOR REPLICA ON
